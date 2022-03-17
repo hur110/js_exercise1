@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+
+<body style="background-color: blanchedalmond;">
+    <h1
+        style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; background-color: blueviolet; padding: 20px;">
+        GUESS GAME</h1>
+    <div style="text-align: center; padding: 50px;">
+        <h3>Guess Number From 1 to 10</h3>
+        <div>
+            <input style="padding: 10px; width: 300px; border-radius: 25px; border-color: blue;" type="number" value="0" id="secret_num">
+        <button style="padding: 5px; width: 60px; background-color: blueviolet; font-weight: bold;" onclick="Find()">PLAY</button>
+        </div>
+        <h1 style="font-size: xx-large;" id="ans"></h1>
+    </div>
+
+    <script>
+        const Find = () => {
+            var num = 5;
+            var secret = document.getElementById('secret_num').value;
+            if (secret == num) {
+                document.getElementById('ans').innerText = " “Bingo! Correct answer”.";
+            } else if (secret == --num) {
+                document.getElementById('ans').innerText = " “Close enough to the correct answer”.";
+
+            } else {
+                document.getElementById('ans').innerText = " “You Are Not Close To The Answer...Try Again!!”.";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
