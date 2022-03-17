@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    <input style="padding: 5px; width: 200px; border-radius: 10px;" type="text" id="signal_color" placeholder="Enter any traffic signal color">
+    <h3 id="txt"></h3>
+    <button onclick="clk_btn()">Click</button>
+
+
+    <script>
+        function clk_btn() {
+            let color = document.getElementById('signal_color').value;
+            if (color == 'red') {
+                document.getElementById('txt').innerText = "Must Stop";
+            }else if (color == 'yellow') {
+                document.getElementById('txt').innerText = "Ready To Move";
+            }else if (color == 'green') {
+                document.getElementById('txt').innerText = "Move Now";
+            }else{
+                document.getElementById('txt').innerText = "Write Only red, yellow or green";  
+            }
+        }
+    </script>
+</body>
+</html>
