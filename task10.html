@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task10</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <input type="text" id="tim" style="padding: 10px; width: 300px; border-radius: 25px;" placeholder="Enter a Character"><br><br>
+        <button style="padding: 5px; width: 60px;" onclick="chk_time()">Click</button>
+    </div>
+
+    <script>
+        const chk_time = () => {
+            let timing = document.getElementById('tim').value;
+            if (timing >= "00:00" && timing <="12:00") {
+                alert("Good morning");
+            }else if (timing >= "12:00" && timing < "17:00") {
+                alert("Good afternoon");
+            }else if (timing >= "15:00" && timing < "21:00") {
+                alert("Good evening");
+            }else if (timing >= "21:00" && timing <= "23:59") {
+                alert("Good night");
+            }else{
+                alert("wrong input");
+            }
+        }
+    </script>
+</body>
+</html>
