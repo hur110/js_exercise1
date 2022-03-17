@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+
+<body>
+    <div style="padding: 15px;">
+        <input type="number" id="tot_sub1" value="100" placeholder="1st subject total marks">
+        <input type="number" id="tot_sub2" value="100" placeholder="2nd subject total marks">
+        <input type="number" id="tot_sub3" value="100" placeholder="3rd subject total marks"><br><br>
+    </div>
+    <div style="padding: 15px;">
+        <input type="number" id="subj1" placeholder="1st subject obtained marks">
+        <input type="number" id="subj2" placeholder="2nd subject obtained masks">
+        <input type="number" id="subj3" placeholder="3rd subject obtained masks"><br><br>
+        <button onclick="calculation()">Calculate</button>
+    </div>
+    <div style="padding: 15px;">
+        <h4 id="tex1">Total Marks</h4>
+        <h4 id="tex2">Marks Obtained</h4>
+        <h4 id="tex3">Percentage</h4>
+        <h4 id="tex4">Grade</h4>
+        <h4 id="tex5">Remarks</h4>
+    </div>
+
+    <script>
+        const calculation = () => {
+            let tot_mark1 = document.getElementById('tot_sub1').value;
+            let tot_mark2 = document.getElementById('tot_sub2').value;
+            let tot_mark3 = document.getElementById('tot_sub3').value;
+            let tot_marks = parseFloat(tot_mark1) + parseFloat(tot_mark2) + parseFloat(tot_mark3);
+            document.getElementById('tex1').innerText = `Total Marks: ${tot_marks}`;
+
+            let mark1 = document.getElementById('subj1').value;
+            let mark2 = document.getElementById('subj2').value;
+            let mark3 = document.getElementById('subj3').value;
+
+            let marks_obtain = parseFloat(mark1) + parseFloat(mark2) + parseFloat(mark3);
+            document.getElementById('tex2').innerText = `Marks Obtained: ${marks_obtain.toFixed(2)}`;
+
+            var percentage = marks_obtain / tot_marks * 100;
+            document.getElementById('tex3').innerText = `Percentage: ${percentage.toFixed(2)}`;
+
+            if (percentage >= 80 && percentage <=100) {
+                document.getElementById('tex4').innerText = `Grade: A-one`;
+                document.getElementById('tex5').innerText = `Remarks: Excellent`;
+
+            } else if (percentage >= 70 && percentage <=79) {
+                document.getElementById('tex4').innerText = `Grade: A`;
+                document.getElementById('tex5').innerText = `Remarks: Good`;
+
+            }else if (percentage >= 60 && percentage <=69) {
+                document.getElementById('tex4').innerText = `Grade: B`;
+                document.getElementById('tex5').innerText = `Remarks: You need to improve`;
+
+            }else if (percentage < 60) {
+                document.getElementById('tex4').innerText = `Grade: Fail`;
+                document.getElementById('tex5').innerText = `Remarks: Sorry`;
+
+            }else{
+                alert('Give Write input to calculate');
+  
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
