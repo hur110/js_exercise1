@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+</head>
+
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h4>Write a Number To find Whether a number is Even or Odd</h4>
+        <input type="number" id="num" style="padding: 10px; width: 300px; border-radius: 25px;">
+        <button style="padding: 5px; width: 60px;" onclick="even_odd()">Click</button>
+    </div>
+
+
+    <script>
+        const even_odd = () => {
+            let number = 2;
+            let value = document.getElementById('num').value;
+            if (value % number == 0) {
+                alert(`${value} is Even Number`);
+            } else {
+                alert(`${value} is Odd Number`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
