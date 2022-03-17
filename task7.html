@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7</title>
+</head>
+
+<body>
+    
+        <div style="text-align: center; margin-top: 50px;">
+            <input type="number" id="number" style="padding: 10px; width: 300px; border-radius: 25px;"><br><br>
+            <button style="padding: 5px; width: 60px;" onclick="chk_num()">Click</button>
+        </div>
+    
+
+
+
+    <script>
+        function chk_num() {
+            let num = document.getElementById('number').value;
+            if (num.includes("-")) {
+                alert("its a negative number");
+            } else if (num == 0) {
+                alert("its a zero number");
+            } else {
+                alert("its a positive number");
+            }
+        }
+    </script>
+</body>
+
+</html>
