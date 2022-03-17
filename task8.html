@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <input type="text" id="number" style="padding: 10px; width: 300px; border-radius: 25px;" placeholder="Enter a Character"><br><br>
+        <button style="padding: 5px; width: 60px;" onclick="chk_num()">Click</button>
+    </div>
+
+
+    <script>
+        const chk_num = () => {
+            let character = document.getElementById('number').value;
+            if (character == "a" || character == "e" || character == "i" || character == "o" || character == "u" ) {
+                alert("It's a vowel");
+            }else{
+                alert("This character is not a vowel");
+            }
+        }
+    </script>
+</body>
+</html>
