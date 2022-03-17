@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+
+<body>
+    
+    <input type="text" id="user_input" placeholder="Enter Your City Name">
+    <button onclick="clk_btn()">Click</button>
+    <h1 id="welcome_heading"></h1>
+
+    <script>
+
+        function clk_btn() {
+            let city_name = document.getElementById('user_input').value;
+
+            if (city_name == "Karachi" || city_name == "karachi" ) {
+                document.getElementById('welcome_heading').innerText = "Welcome To The City Of Lights";
+            }
+            else {
+                document.getElementById('welcome_heading').innerText = "Please write karachi as input";
+            }
+        }
+    </script>
+</body>
+
+</html>
